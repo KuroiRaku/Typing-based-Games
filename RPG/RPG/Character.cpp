@@ -8,6 +8,7 @@ Character::Character()
 	this->YPos = 0.0;
 	Name = "Executer";
 	Level = 1;
+	TimeForImpact = 8;
 	Exp = 0;
 	ExpNext = static_cast<int>(Level * 100) + 200;
 	Attack = 5;
@@ -35,6 +36,7 @@ void Character::Warrior(std::string name1)
 	this->YPos = 0.0;
 	Name = name1;
 	Level = 1;
+	TimeForImpact = 8;
 	Exp = 0;
 	ExpNext = static_cast<int>(Level * 100) + 200;
 	Attack = 5;
@@ -55,6 +57,7 @@ void Character::Tank(std::string name1)
 	this->XPos = 0.0;
 	this->YPos = 0.0;
 	Name = name1;
+	TimeForImpact = 3;
 	Level = 1;
 	Exp = 0;
 	ExpNext = static_cast<int>(Level * 100) + 200;
@@ -77,6 +80,7 @@ void Character::Mage(std::string name1)
 	Name = name1;
 	Level = 1;
 	Exp = 0;
+	TimeForImpact = 8;
 	ExpNext = static_cast<int>(Level * 100) + 300;
 	Attack = 2;
 	MagicAttack = 12;
@@ -97,6 +101,7 @@ void Character::Speeder(std::string name1)
 	this->YPos = 0.0;
 	Name = name1;
 	Level = 1;
+	TimeForImpact = 12;
 	Exp = 0;
 	ExpNext = static_cast<int>(Level * 100) + 200;
 	Attack = 2;
@@ -118,6 +123,7 @@ void Character::Special(std::string name1)
 	this->YPos = 0.0;
 	Name = name1;
 	Level = 10;
+	TimeForImpact = 8;
 	Exp = 0;
 	ExpNext = static_cast<int>(Level * 100) + 300;
 	Attack = 15;
@@ -136,6 +142,7 @@ void Character::PrintStats()const
 	std::cout << "Character Stats: " << std::endl;
 	std::cout << "Name: " << this->Name << std::endl;
 	std::cout << "Level: " << this->Level << std::endl;
+	std::cout << "TimeForImpact: " << this->TimeForImpact << std::endl;
 	std::cout << "Exp: " << this->Exp << std::endl;
 	std::cout << "Exp to Next Level: " << this->ExpNext << std::endl;
 	std::cout << std::setw(10) << std::setfill('=') << std::endl;
@@ -219,6 +226,7 @@ void Character::AddStat()
 		return std::to_string(XPos) + " "
 			+ std::to_string(YPos) + " "
 			+ Name+ " "
+			+ std::to_string(TimeForImpact) + " "
 			+ std::to_string(Level) + " "
 			+ std::to_string(Exp) + " "
 			+ std::to_string(Attack) + " "

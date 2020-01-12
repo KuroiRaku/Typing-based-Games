@@ -24,6 +24,7 @@ public:
 	inline const double& GetY()const { return this->YPos; }
 	inline const double& GetX()const { return this->XPos; }
 	inline const std::string& GetName()const { return this->Name; }
+	inline const int& GetTimeForImpact() { return this->TimeForImpact; }
 	inline const int& GetLevel()const { return this->Level; }
 	inline const int& GetExp()const { return this->Exp; }
 	inline const int& GetExpNext()const { return this->ExpNext; }
@@ -46,6 +47,7 @@ public:
 	inline void SetHp(int s) {  Hp = s; }
 	inline void SetSkillPoint(int s) {  SkillPoints = s; }
 	inline void SetStamina(int s) { Stamina = s; }
+	inline void SetTimeForImpact(int s) { TimeForImpact = s;}
 	inline void SetMana(int s) {  Mana = s; }
 
 
@@ -54,6 +56,7 @@ private:
 	std::string Name;
 	int Level;
 	int LevelMax = 30;
+	int TimeForImpact;
 	int Exp;
 	int ExpNext;
 	int Attack;
