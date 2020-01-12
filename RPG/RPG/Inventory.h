@@ -8,24 +8,24 @@ class Inventory
 public:
 	Inventory();
 	virtual ~Inventory();
-	void addItem(const item& item);
-	void removeItem(int index);
-	inline void debugPrint()const
+	void AddItem(const item& item);
+	void RemoveItem(int index);
+	inline void DebugPrint()const
 	{
 
-		for (size_t i = 0; i < this->nrofItems; i++)
+		for (size_t i = 0; i < this->NrOfItems; i++)
 		{
-			std::cout << this->itemArr[i]->debugPrint() << std::endl;
+			std::cout << this->ItemArr[i]->DebugPrint() << std::endl;
 		}
 	}
 
 	//function
 private:
-	void initialize(const int from);
-	void expand();
-	item** itemArr;
-	int caps;
-	int nrofItems;
+	void Initialize(const int from);
+	void Expand();
+	item** ItemArr;
+	int Caps;
+	int NrOfItems;
 
 };
 

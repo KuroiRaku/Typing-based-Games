@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include<iomanip>
-#include "../function.h"
 #include "Character.h"
 #include <ctime>
 #include <stdlib.h>
@@ -21,26 +20,26 @@ public:
 	//Operators
 
 	//functions
-	void mainmenu();
-	void initGame();
-	void createNewCharacters();
-	void save();
-	void load();
+	void MainMenu();
+	void InitGame();
+	void CreateNewCharacters();
+	void Save();
+	void Load();
 
 
 	//Accessors
-	inline bool getPlaying() const { return this->playing; }
+	inline bool GetPlaying() const { return this->Playing; }
 
 	//modifiers
 private:
-	int choice;
-	bool playing;
+	int Choice;
+	bool Playing;
 
 	//Character related
 	int ActiveCharacter;
-	std::string filename;
-	std::vector<Character> characters;
-	Character character;
+	std::string Filename;
+	std::vector<Character> Characters;
+	Character Character;
 };
 
 

@@ -2,10 +2,10 @@
 
 game::game()
 {
-	choice = 0;
-	playing = true;
+	Choice = 0;
+	Playing = true;
 	ActiveCharacter = 0;
-	filename = "SaveFile.txt";
+	Filename = "SaveFile.txt";
 }
 
 game::~game()
@@ -14,7 +14,7 @@ game::~game()
 }
 //functions
 
-void game::initGame()
+void game::InitGame()
 {
 	std::string name;
 	std::cout << "Enter name your name: ";
@@ -25,60 +25,60 @@ void game::initGame()
 	std::cout << "3. Fox" << std::endl;
 	std::cout << "4. Elephant" << std::endl;
 	std::cout << "5. I don't know" << std::endl;
-	cin >> choice;
-	bool ok = true;
-	while (ok) {
-		switch (choice)
+	cin >> Choice;
+	bool Ok = true;
+	while (Ok) {
+		switch (Choice)
 		{
 		case 1:
-			character.Speeder(name);
-			ok = false;
+			Character.Speeder(name);
+			Ok = false;
 			break;
 		case 2:
-			character.Warrior(name);
-			ok = false;
+			Character.Warrior(name);
+			Ok = false;
 			break;
 		case 3:
-			character.Mage(name);
+			Character.Mage(name);
 			break;
 		case 4:
-			character.Tank(name);
-			ok = false;
+			Character.Tank(name);
+			Ok = false;
 			break;
 		case 5:
 		{
-			int j = rand() % 5 + 1;
-			switch (j)
+			int J = rand() % 5 + 1;
+			switch (J)
 			{
 			case 1:
-				character.Speeder(name);
+				Character.Speeder(name);
 				break;
 			case 2:
-				character.Warrior(name);
+				Character.Warrior(name);
 				break;
 			case 3:
-				character.Mage(name);
+				Character.Mage(name);
 				break;
 			case 4:
-				character.Tank(name);
+				Character.Tank(name);
 				break;
 			case 5:
-				character.Special(name);
+				Character.Special(name);
 				break;
 			}
-			ok = false;
+			Ok = false;
 			break;
 		}
 		default:
 			std::cout << "Please don't mess with me :(" << std::endl;
 			cin.clear();
 			cin.ignore();
-			cin >> choice;
+			cin >> Choice;
 			break;
 		}
 	}
 }
-void game::mainmenu()
+void game::MainMenu()
 {
 	std::cout << "* MAIN MENU *" << std::endl << std::endl;
 	std::cout << "0: Quit" << std::endl;
@@ -91,35 +91,35 @@ void game::mainmenu()
 	std::cout << "7: Loud" << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl << "Player's Choice: ";
-	cin >> choice;
+	cin >> Choice;
 
-	switch (choice)
+	switch (Choice)
 	{
 	case 0:
-		playing = false;
+		Playing = false;
 		break;
 	case 5:
-		characters[ActiveCharacter].printstats();
+		Character.PrintStats();
 		break;
 	case 6:
-		save();
+		Save();
 		break;
 	case 7:
-		load();
+		Load();
 		break;
 	default:
 		break;
 	}
 }
-void game::createNewCharacters()
+void game::CreateNewCharacters()
 {
 
 }
-void game::save()
+void game::Save()
 {
 
 }
-void game::load()
+void game::Load()
 {
 
 }

@@ -1,54 +1,54 @@
 #include "Inventory.h"
 Inventory::Inventory()
 {
-	caps = 10;
-	nrofItems = 0;
-	itemArr = new item * [caps];
+	Caps = 10;
+	NrOfItems = 0;
+	ItemArr = new item * [Caps];
 }
 
 Inventory::~Inventory()
 {
-	for (size_t i = 0; i < this->nrofItems; i++)
+	for (size_t i = 0; i < this->NrOfItems; i++)
 	{
-		delete this->itemArr[i];
+		delete this->ItemArr[i];
 	}
-	delete[]itemArr;
+	delete[]ItemArr;
 }
 
-void Inventory::initialize(const int from)
+void Inventory::Initialize(const int from)
 {
-	for (size_t i = from; i < this->caps; i++)
+	for (size_t i = from; i < this->Caps; i++)
 	{
-		this->itemArr[i] = 0;
+		this->ItemArr[i] = 0;
 	}
 }
-void Inventory::expand()
+void Inventory::Expand()
 {
-	this->caps *= 2;
-	item** tempArr = new item * [this->caps];
-	for (size_t i = 0; i < nrofItems; i++)
+	this->Caps *= 2;
+	item** TempArr = new item * [this->Caps];
+	for (size_t i = 0; i < NrOfItems; i++)
 	{
-		tempArr[i] = new item(*this->itemArr[i]);
+		TempArr[i] = new item(*this->ItemArr[i]);
 	}
-	for (size_t i = 0; i < this->nrofItems; i++)
+	for (size_t i = 0; i < this->NrOfItems; i++)
 	{
-		delete this->itemArr[i];
+		delete this->ItemArr[i];
 	}
-	delete[]this->itemArr;
+	delete[]this->ItemArr;
 
-	this->itemArr = tempArr;
-	this->initialize(this->nrofItems);
+	this->ItemArr = TempArr;
+	this->Initialize(this->NrOfItems);
 }
 
-void Inventory::addItem(const item& Item)
+void Inventory::AddItem(const item& Item)
 {
-	if (this->nrofItems >= this->caps)
+	if (this->NrOfItems >= this->Caps)
 	{
-		expand();
+		Expand();
 	}
-	this->itemArr[this->nrofItems++] = new item(Item);
+	this->ItemArr[this->NrOfItems++] = new item(Item);
 }
-void Inventory::removeItem(int index)
+void Inventory::RemoveItem(int index)
 {
 
 }

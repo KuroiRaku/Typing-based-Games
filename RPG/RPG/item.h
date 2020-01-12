@@ -9,15 +9,15 @@ class item
 public:
 	item();
 	virtual ~item();
-	inline std::string debugPrint()const
+	inline std::string DebugPrint()const
 	{
-		return this->name;
+		return this->Name;
 	}
 private:
-	std::string name;
-	std::string description;
-	int sellprice;
-	int buyprice;
+	std::string Name;
+	std::string Description;
+	int Sellprice;
+	int Buyprice;
 	item Item();
-	std::string state;
+	std::string State;
 };

@@ -7,17 +7,17 @@ int main()
 	srand(time(NULL));
 
 	game game;
-	game.initGame();
+	game.InitGame();
 
 	Inventory inv;
-	inv.addItem(item());
+	inv.AddItem(item());
 
-	inv.debugPrint();
+	inv.DebugPrint();
 
 	Character char_default;
-	while (game.getPlaying())
+	while (game.GetPlaying())
 	{
-		game.mainmenu();
+		game.MainMenu();
 	}
 	return 0;
 }
