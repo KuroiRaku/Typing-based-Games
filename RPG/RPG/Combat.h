@@ -9,12 +9,13 @@ public:
 	//functions
 	void EnemyEncounter();
 	void PrintResult()const;
-	void combat();
+	void combat(Character Character);
 
 
 private:
 	std::string Input;
-	int AttackCounter;
+	int LightAttackCounter;
+	int HeavyAttackCounter;
 	int DefenceCounter;
 	int AvoidCounter;
 	int WindMagicCounter;
@@ -25,6 +26,5 @@ private:
 	int DarkMagicCounter;
 	int LightMagicCounter;
 	int FailCounter;
-	Character Character;
 };
 
