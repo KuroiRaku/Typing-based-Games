@@ -8,6 +8,8 @@ class Inventory
 public:
 	Inventory();
 	virtual ~Inventory();
+
+
 	void AddItem(const item& item);
 	void RemoveItem(int index);
 	inline void DebugPrint()const
