@@ -9,6 +9,7 @@ public:
 	//functions
 	void EnemyEncounter();
 	void PrintResult()const;
+	void combat();
 
 
 private:
@@ -24,6 +25,6 @@ private:
 	int DarkMagicCounter;
 	int LightMagicCounter;
 	int FailCounter;
-
+	Character Character;
 };
 

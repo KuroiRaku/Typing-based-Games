@@ -20,3 +20,8 @@ void Combat::PrintResult() const
 
 }
 
+void Combat::combat()
+{
+	int BattleTime = Character.GetTimeForImpact();
+}
+
