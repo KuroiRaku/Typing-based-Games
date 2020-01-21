@@ -1,9 +1,13 @@
-#include "game.h"
+//#include "game.h"
 
 
 int main()
 {
 
+
+	return 0;
+	// OLD CODE
+	/*
 	srand(time(NULL));
 
 	game game;
@@ -18,6 +22,5 @@ int main()
 	while (game.GetPlaying())
 	{
 		game.MainMenu();
-	}
-	return 0;
+	} */
 }
