@@ -1,8 +1,6 @@
 #pragma once
 #include <iostream>
-#include<iomanip>
 #include "Character.h"
-#include <ctime>
 #include <stdlib.h>
 #include <vector>
 #include <fstream>
