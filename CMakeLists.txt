@@ -16,6 +16,7 @@ set( GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set( GLFW_BUILD_DOCS ON CACHE BOOL "" FORCE)
 
 add_subdirectory( dependencies/linux/glfw )
+add_subdirectory( dependencies/linux/glm )
 
 add_executable( Typing-based-game )
 
@@ -40,6 +41,7 @@ target_compile_options( Typing-based-game
 target_link_libraries( Typing-based-game
    PUBLIC
       glfw
+      glm
 )
 
 target_sources( Typing-based-game
