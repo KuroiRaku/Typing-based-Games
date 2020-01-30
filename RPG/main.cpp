@@ -1,5 +1,6 @@
 //#include "game.h"
-#include "GLFW/glfw3.h"
+//#include "GLFW/glfw3.h"
+#include "Engine/Window.h"
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -9,28 +10,16 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
 int main()
 {
-	// Initialize GLFW
-	if (!glfwInit())
-	{
-		return 1;
-	}
-
-	// Create GLFW Window
-	GLFWwindow* window = glfwCreateWindow(640, 480, "Test Window", 0, 0);
-	if (!window)
-	{
-		glfwTerminate();
-		return 1;
-	}
+	Window* window = new Window(1280, 720, "Test Window");
 
 	// Set key callback
-	glfwSetKeyCallback(window, key_callback);
+	glfwSetKeyCallback(window->GetGLFWWindowHandle(), key_callback);
 
 	// Switching context
 	//glfwMakeContextCurrent(window);
 	
 	// Infinite loop until closed
-	while (!glfwWindowShouldClose(window))
+	while (!glfwWindowShouldClose(window->GetGLFWWindowHandle()))
 	{
 		// Do things
 
@@ -39,7 +28,7 @@ int main()
 	}
 
 	// Terminate GLFW
-	glfwDestroyWindow(window);
+	delete(window);
 	glfwTerminate();
 
 	return 0;
