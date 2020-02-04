@@ -94,7 +94,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\windows\glfw\include;$(SolutionDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\windows\glfw\include;$(SolutionDir)dependencies\windows\glad\include;$(SolutionDir)dependencies\glm;$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +125,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\windows\glfw\include;$(SolutionDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\windows\glfw\include;$(SolutionDir)dependencies\windows\glad\include;$(SolutionDir)dependencies\glm;$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +136,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\dependencies\windows\glad\src\glad.c" />
     <ClCompile Include="Game\Character.cpp" />
     <ClCompile Include="Game\Combat.cpp" />
     <ClCompile Include="Game\Enemies.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="Engine\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Core.h" />
     <ClInclude Include="Game\Character.h" />
     <ClInclude Include="Game\Combat.h" />
     <ClInclude Include="Game\Enemies.h" />
