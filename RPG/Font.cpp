@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdio.h>
-#include "stb_image.h"
+
 
 
 

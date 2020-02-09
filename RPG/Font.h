@@ -1,7 +1,8 @@
-#include "main.cpp"
+#include "glad/glad.h"
 #include <glm\glm.hpp>
 #include <string>
 #include <vector>
+#include "stb_image.h"
 #include <map>
 
 class Font {
