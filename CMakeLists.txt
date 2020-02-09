@@ -15,36 +15,37 @@ set( GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE )
 set( GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set( GLFW_BUILD_DOCS ON CACHE BOOL "" FORCE)
 
+add_subdirectory( dependencies/linux/GLAD )
 add_subdirectory( dependencies/linux/glfw )
 add_subdirectory( dependencies/linux/glm )
 
 add_executable( Typing-based-game )
 
 set_target_properties( Typing-based-game
-   PROPERTIES
-      CXX_EXTENSIONS OFF
+    PROPERTIES
+        CXX_EXTENSIONS OFF
 )
 
 target_compile_features( Typing-based-game 
-   PRIVATE
-      cxx_std_17
+    PRIVATE
+        cxx_std_17
 )
 
 target_compile_options( Typing-based-game 
-   PRIVATE
-      $<$<PLATFORM_ID:UNIX>:-pthread>
+    PRIVATE
+        $<$<PLATFORM_ID:UNIX>:-pthread>
 
-      $<$<AND:$<CXX_COMPILER_ID:Clang>,$<CONFIG:DEBUG>>:${CLANG_DEBUG_FLAGS}>
-      $<$<AND:$<CXX_COMPILER_ID:Clang>,$<CONFIG:RELEASE>>:${CLANG_RELEASE_FLAGS}>
+        $<$<AND:$<CXX_COMPILER_ID:Clang>,$<CONFIG:DEBUG>>:${CLANG_DEBUG_FLAGS}>
+        $<$<AND:$<CXX_COMPILER_ID:Clang>,$<CONFIG:RELEASE>>:${CLANG_RELEASE_FLAGS}>
 )
 
 target_link_libraries( Typing-based-game
-   PUBLIC
-      glfw
-      glm
+    PUBLIC
+        glfw
+        glm
 )
 
 target_sources( Typing-based-game
-   PRIVATE
-      "RPG/main.cpp"
+    PRIVATE
+        "RPG/main.cpp"
 )
