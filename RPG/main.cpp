@@ -3,8 +3,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
-
+#include "Font.h"
 #include "Engine/Window.h"
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -17,6 +16,8 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
 int main()
 {
+	Font font("Font/Pixel.fnt");
+	
 	Window* window = new Window(1280, 720, "Test Window");
 
 	// Set key callback
@@ -29,7 +30,7 @@ int main()
 	while (!glfwWindowShouldClose(window->GetGLFWWindowHandle()))
 	{
 		// Do things
-
+		font.draw("I sucks", 0, 0);
 		// Poll Events
 		glfwPollEvents();
 	}

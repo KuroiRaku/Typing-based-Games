@@ -1,4 +1,4 @@
-#include <GLfw/glfw3.h>
+#include "main.cpp"
 #include <glm\glm.hpp>
 #include <string>
 #include <vector>
