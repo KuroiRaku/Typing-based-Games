@@ -1,7 +1,13 @@
 //#include "game.h"
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
+//#include "GLFW/glfw3.h"
+#include "Engine/Window.h"
 
+// * WARNING: THIS IS ALL TEST CODE FOR NOW * //
+
+
+// TODO: Abstract input in separate class
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
@@ -10,28 +16,19 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
 int main()
 {
-	// Initialize GLFW
-	if (!glfwInit())
+	Window* window = new Window(1280, 720, "Test Window");
+	
+	// Initialize Glad
+	if (!window->InitGlad())
 	{
-		return 1;
+		return -1;
 	}
 
-	// Create GLFW Window
-	GLFWwindow* window = glfwCreateWindow(640, 480, "Test Window", 0, 0);
-	if (!window)
-	{
-		glfwTerminate();
-		return 1;
-	}
-
-	// Set key callback
-	glfwSetKeyCallback(window, key_callback);
-
-	// Switching context
-	//glfwMakeContextCurrent(window);
+	// Set key callback <- Also pull this out to an input class later
+	glfwSetKeyCallback(window->GetGLFWWindowHandle(), key_callback);
 	
 	// Infinite loop until closed
-	while (!glfwWindowShouldClose(window))
+	while (!glfwWindowShouldClose(window->GetGLFWWindowHandle()))
 	{
 		// Do things
 
@@ -39,12 +36,13 @@ int main()
 		glfwPollEvents();
 	}
 
-	// Terminate GLFW
-	glfwDestroyWindow(window);
+	// Terminate GLFW <- Maybe pull this out to a core shutdown method or something
+	delete(window);
 	glfwTerminate();
 
 	return 0;
-	// OLD CODE
+	
+	// OLD CODE //
 	/*
 	srand(time(NULL));
 
