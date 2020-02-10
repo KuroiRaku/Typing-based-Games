@@ -1,5 +1,5 @@
 
-
+#define STB_IMAGE_IMPLEMENTATION
 #include "Font.h"
 #include <fstream>
 #include <iostream>
