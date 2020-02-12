@@ -51,5 +51,6 @@ target_link_libraries( Typing-based-game
 target_sources( Typing-based-game
     PRIVATE
         "RPG/main.cpp"
+        "RPG/Engine/GFX/Renderer.cpp"
         "RPG/Engine/Window.cpp"
 )
