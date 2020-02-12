@@ -40,6 +40,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Font.cpp">
+    <ClCompile Include="..\dependencies\windows\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,6 +67,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Font.h">
+    <ClInclude Include="Engine\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
