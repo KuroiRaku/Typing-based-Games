@@ -1,11 +1,6 @@
 //#include "game.h"
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-//#include "GLFW/glfw3.h"
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 #include "Font.h"
+//#include "GLFW/glfw3.h"
 #include "Engine/Window.h"
 
 

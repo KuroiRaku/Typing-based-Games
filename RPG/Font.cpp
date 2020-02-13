@@ -3,7 +3,7 @@
 #include "Font.h"
 #include <fstream>
 #include <iostream>
-#include <stdio.h>
+
 
 
 
@@ -415,8 +415,8 @@ void Font::draw(const char* const a_Letters, int const a_X, int const a_Y, float
 
 
 int Font::getsSubString(const std::string* const a_Input, std::string* a_Output, int a_Start, char a_Prefix, char a_Suffix) {
-	int start = a_Input->find_first_of(a_Prefix, a_Start) + 1;
-	int end = a_Input->find_first_of(a_Suffix, start);
+	long start = a_Input->find_first_of(a_Prefix, a_Start) + 1;
+	long end = a_Input->find_first_of(a_Suffix, start);
 	a_Output->assign(a_Input->substr(start, end - start));
 
 	return end;
