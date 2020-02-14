@@ -26,6 +26,8 @@ set_target_properties( Typing-based-game
         CXX_EXTENSIONS OFF
 )
 
+target_compile_definitions( Typing-based-game PRIVATE GLFW_INCLUDE_NONE )
+
 target_compile_features( Typing-based-game 
     PRIVATE
         cxx_std_17
@@ -41,6 +43,7 @@ target_compile_options( Typing-based-game
 
 target_link_libraries( Typing-based-game
     PUBLIC
+        glad
         glfw
         glm
 )
@@ -48,4 +51,6 @@ target_link_libraries( Typing-based-game
 target_sources( Typing-based-game
     PRIVATE
         "RPG/main.cpp"
+        "RPG/Engine/GFX/Renderer.cpp"
+        "RPG/Engine/Window.cpp"
 )
