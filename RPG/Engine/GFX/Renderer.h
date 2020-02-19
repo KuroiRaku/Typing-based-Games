@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../Component.h"
+#include "../System.h"
 
-class Renderer : public Component
+class Renderer final : public System
 {
 public:
-   virtual void update( float dt ) override;
+    virtual void update( float dt ) override;
 };
 
