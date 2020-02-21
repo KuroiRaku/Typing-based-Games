@@ -137,7 +137,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\dependencies\windows\glad\src\glad.c" />
-    <ClCompile Include="Font2.cpp" />
+    <ClCompile Include="Font.cpp" />
     <ClCompile Include="Game\Character.cpp" />
     <ClCompile Include="Game\Combat.cpp" />
     <ClCompile Include="Game\Enemies.cpp" />
@@ -148,8 +148,8 @@
     <ClCompile Include="Engine\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Font.h" />
     <ClInclude Include="Engine\Core.h" />
+    <ClInclude Include="Font.h" />
     <ClInclude Include="Game\Character.h" />
     <ClInclude Include="Game\Combat.h" />
     <ClInclude Include="Game\Enemies.h" />

@@ -10,10 +10,9 @@
     <ClCompile Include="Game\item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Window.cpp" />
-    <ClCompile Include="Font2.cpp" />
+    <ClCompile Include="Font.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Font.h" />
     <ClInclude Include="Engine\Core.h" />
     <ClInclude Include="Game\Character.h" />
     <ClInclude Include="Game\Combat.h" />
@@ -22,5 +21,6 @@
     <ClInclude Include="Game\Inventory.h" />
     <ClInclude Include="Game\item.h" />
     <ClInclude Include="Engine\Window.h" />
+    <ClInclude Include="Font.h" />
   </ItemGroup>
 </Project>

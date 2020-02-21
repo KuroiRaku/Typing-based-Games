@@ -305,7 +305,7 @@ void Font::loadTextures() {
 }
 
 void Font::genVertex() {
-	glGenVertexArrays(1, &VAO);
+	glad_glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 
 	glBindVertexArray(VAO);
